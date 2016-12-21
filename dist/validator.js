@@ -249,7 +249,8 @@ var container = {
    */
   _load: function(lang) {
     if (!this.messages[lang]) {
-      var rawMessages = require('./lang/' + lang);
+      // fix for react native
+      var rawMessages = require('./lang/en');
       this._set(lang, rawMessages);
     }
   },
